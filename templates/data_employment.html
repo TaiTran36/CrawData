@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>[ Recruitment ]</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!----------------------------------- Overview ------------------------------------------------->
+		<script src="static/js/jquery-3.4.1.min.js"></script>
+		<!-- <link rel="stylesheet" href="css/bootstrap3.css" /> -->
+		<!-- <link rel="stylesheet" href="css/style-overview.css" /> -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<link rel="stylesheet" href="static/css/bootstrap3.css"/>
+		<link rel="stylesheet" href="static/css/style-overview.css"/>
+
+		<!----------------------------------- Style Custom ------------------------------------------------->
+		<!-- <link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/responsive.css" /> -->
+		<link rel="stylesheet" href="static/css/style.css"/>
+		<link rel="stylesheet" href="static/css/responsive.css"/>
+	</head>
+	<body> 
+		<header>
+			<a href="/">
+			<div class="I-header">
+				I-Crawler
+			</div>
+			</a>
+		</header>
+		<main>
+			<div class="I-url">
+				<div class="wrapper">
+					<div class="url_top">
+						<div class="url_form">
+							<h1>Collect Data from the Internet</h1>
+							<div class="input_form">
+								<input type="text" id="search" placeholder="Type to search..." />
+								<button><i id="search-button" class="fas fa-search"></i></button>
+								<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+								<script>
+								$("#search-button").click(function(){
+								$.each($(".table tbody tr"), function() {
+
+									if($(this).text().toLowerCase().indexOf($('#search').val().toLowerCase()) === -1)
+										$(this).hide();
+									else
+										$(this).show();
+									});
+								});
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="I-data">
+				<div class="wrapper">
+					<div class="data_wrapper">
+						<h1>Data From Employment</h1>
+						{% for data in time_col %}
+							<h2>{{data.time}}</h2>
+						{% endfor %}
+						<div class="download_wrapper">
+							<form method="POST">
+								<button type="submit" name="button" value="download" class="btn btn-success">Download</button>
+							</form>
+						</div>
+						<div class="table_wrapper">
+							<table class="table">
+								
+								<thead>
+									<tr>
+										<th>Title</th>
+								        <th>Application Requirement</th>
+										<th>Company Profile</th>
+										<th>Link</th>
+									</tr>
+								</thead>
+								<tbody>
+								{% for data in data_col %}
+									<tr>
+										<td>{{data.title}}</td>
+										<td>{{data.application_requirement}}</td>
+										<td>{{data.company_profile}}</td>
+										<td><a href="{{data.link}}" target="_blank">{{data.link}}</a></td>
+									</tr>
+								{% endfor %}
+								</tbody>
+							</table>
+							<script>
+								$('.table tbody tr).each(function() {
+									var myJSON = JSON.stringify($(this).text())
+									document.getEementByClassName("table").innerHTML = myJSON;
+								});
+							</script>
+							<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+							<script type="text/javascript" src="static/js/paginathing.js"></script>
+							<script type="text/javascript">
+							  jQuery(document).ready(function($){
+								$('.table tbody').paginathing({
+								  perPage: 50,
+								  insertAfter: '.table',
+								  pageNumbers: true
+								});
+							  });
+							</script>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="I-footer">
+				Copyright © Chainos Solution 2020 
+			</div>
+		</footer>
+	</body>
+	<!----------------------------------- Script Custom ------------------------------------------------->
+	<script src="static/js/bootstrap3.js"></script>
+	<script src="static/js/effect_custom.js"></script>
+
+</html>
+
+

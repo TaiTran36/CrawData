@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Paaji+2');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Eagle+Lake');
+
+
+
+/*
+
+    font-family: 'Poppins';
+    font-family: 'Montserrat';
+    font-family: 'Pacifico';
+    font-family: 'Josefin Sans';
+    font-family: 'Oswald';
+    font-family: 'Lobster';
+    font-family: 'Baloo Paaji 2';
+    font-family: 'Pacifico';
+    font-family: 'Eagle Lake';
+
+
+*/
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'poppins', 'Noto Sans', sans-serif;
+    background-color: #f7f7f7;
+    font-family: 'Oswald';
+}
+a{
+    color: #000;
+}
+a:hover{
+    text-decoration: none;
+    color: #1f305c;
+}
+.wrapper {
+    width: 1280px;
+    height: 100%;
+    margin: auto;
+}
+header{
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 300ms ease;
+}
+main{
+    /*margin: 90px 0 0 0;*/
+    width: 100%;
+}
+footer{
+    /*margin: 50px 0 0 0;*/
+    width: 100%;
+    overflow: hidden;
+}
+.flexX{
+    display: flex;
+    justify-content: center;
+}
+.flexY{
+    display: flex;
+    align-items: center;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glyphicon-chevron-left::before{
+    content: "" !important;
+}
+.glyphicon-chevron-right::before{
+    content: "" !important;
+}
+
+
+.header_in_bound_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_in_button{
+    margin: 0 3px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button1{
+    position: relative;
+    overflow: hidden;
+    transition: all 300ms ease;
+    background-color: #0a318eB3;
+    color: #fff;
+    border-color: #0a318eB3;
+}
+.button1:hover{
+    background-color: #0a318eB3;
+    border-color: #0a318eB3;
+    opacity: .8 !important;
+    transition: all 300ms ease;
+}
+
+.button1:before{
+    position: absolute;
+    content: "";
+    filter: blur(4px);
+    top: -30px;
+    left: 290px;
+    width: 300px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .5);
+    transform: rotate(45deg);
+    transition: all 300ms ease;
+}
+.button1:after{
+    position: absolute;
+    content: "";
+    filter: blur(4px);
+    top: 20px;
+    left: 290px;
+    width: 300px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .5);
+    transform: rotate(45deg);
+    transition: all 300ms ease;
+}
+.button1:hover:before{
+    left: -290px;
+    transition: all 300ms ease;
+}
+.button1:hover:after{
+    left: -290px;
+    transition: all 300ms ease;
+}
+.button4{
+    position: relative;
+    overflow: hidden;
+    transition: all 300ms ease;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #fff;
+}
+.button4:hover{
+    background-color: white;
+    border: 2px solid #fff;
+    color: #000;
+    transition: all 300ms ease;
+}
+
+.button4:before{
+    position: absolute;
+    content: "";
+    filter: blur(4px);
+    top: -30px;
+    left: 290px;
+    width: 300px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .5);
+    transform: rotate(45deg);
+    transition: all 300ms ease;
+}
+.button4:after{
+    position: absolute;
+    content: "";
+    filter: blur(4px);
+    top: 20px;
+    left: 290px;
+    width: 300px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .5);
+    transform: rotate(45deg);
+    transition: all 300ms ease;
+}
+.button4:hover:before{
+    left: -290px;
+    transition: all 300ms ease;
+}
+.button4:hover:after{
+    left: -290px;
+    transition: all 300ms ease;
+}
+
+/*.carousel{
+    overflow: hidden;
+}
+.carousel-control.left{
+    left: -100%;
+    transition: all 300ms ease;
+}
+.carousel-control.right{
+    right: -100%;
+    transition: all 300ms ease;
+}
+.carousel:hover .carousel-control.left{
+    left: 0%;
+}
+.carousel:hover .carousel-control.right{
+    right: 0%;
+}*/
